@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguacate-BOOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #9dff00;
+            color: white;
+            padding: .04rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #eaff00;
+            overflow: hidden;
+            text-align:center;
+        }
+
+        nav a {
+            float:inline-start ;
+            display: block;
+            color: rgb(5, 5, 5);
+            text-align: center;
+            padding: 10px 15px;
+
+        }
+
+        nav a:hover {
+            background-color: #00ff59;
+            text-align: center;
+        }
+
+        main {
+            padding: 30px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #78ce00;
+            color: white;
+            text-align: center;
+            padding: .25rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aguacate-BOOM</h1>
+    <img src="logotipo.jpg" alt="">
+</header>
+
+<nav>
+   
+    <a href="conocemos.html">"Sobre Nosotros" </a>
+    <a href="servicios.html">"Nuestros Servicios"                       </a>
+    <a href="locaizacion.html">"Localizanos"</a>
+    <a href="contacto.html">"Contacto"</a>
+  
+   
+</nav>
+
+<main>
+    <h2>Bienvenido a Aguacate-BOOM </h2>
+    <p>Descubre un mundo de verde, para todas tus botanas(compra al mayoreo) .</p>
+    <!-- Contenido adicional irá aquí -->
+    <h2>Deseas Aguacate?</h2>
+    <div class="image-container">
+        <div class="image-item">
+            <img src="aguacate.jpg" alt="Chocolate 1">
+            <div class="image-caption">
+                <ul>
+                    <li>Pide nuestra variedad de Aguacates</li>
+                    <li>Todos los aguacates fueron cultivados de forma natural.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="image-item">
+            <img src="refriaguacate.jpg" alt="Chocolate 2">
+            <div class="image-caption">
+                <ul>
+                    <li>Danos tu mejor uso para el aguacate!!</li>
+                    <li>Participa y gana una nevera llena de aguacate cada mes.</li>
+                    <li>Sujeto a terminos y condiciones.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="image-item">
+            <img src="aguacateplanta.jpg" alt="Chocolate 3">
+            <div class="image-caption">
+                <ul>
+                    <li>Compra con nosostros tus aguacate</li>
+                    <li>Ventajas</li>
+                    <li>Precio por tonelada</li>
+                    <li>Pedidos inmediato sin esperar</li>            
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<style>
+    .image-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .image-item {
+        width: 30%; /* Ajusta el ancho de las imágenes según tu preferencia */
+        text-align: center;
+    }
+
+    .image-item img {
+        width: 100%;
+        border: 3px solid #223a01; /* Color del borde de la imagen */
+    }
+
+    .image-caption {
+        margin-top: 10px;
+    }
+</style>
+
+
+<form>
+    <input type="text" id="nombre" placeholder="Nombre">
+    <input type="email" id="email" placeholder="Correo electrónico">
+    <button onclick="validarFormulario()">Enviar</button>
+</form>
+<script>
+    function validarFormulario(){
+        var nombre= document.getElementById("nombre").value;
+        var email = document.getElementById("email").value;
+        if(nombre==="" || email==="" ){
+            alert("Por favor, complete todos los campos");
+
+        }else{
+            alert("Formulario valido, Nombre: "+nombre + ", Email: "+email);
+        }
+    }
+    </script>
+
+
+
+
+<footer>
+    <p>&copy; GUARNEROS DE JESUS GABRIEL ALEXANDER   5IM5 PROYECTO.</p>
+</footer>
+
+</body>
+</html>

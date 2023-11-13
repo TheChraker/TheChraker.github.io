@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar Información</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+
+<div id="content">
+    <img id="brandImage" src="logotipo.jpg" alt="Marca Logo">
+    <p>Ven y registra tu usuario, donde partiremos para hacer todos tus Pedidos</p>
+</div>
+<form>
+    <input type="text" id="nombre" placeholder="Nombre">
+    <input type="email" id="email" placeholder="Correo electrónico">
+    <button type="button" onclick="validarFormulario()">Enviar</button>
+</form>
+
+<script>
+    function validarFormulario() {
+        var nombre = document.getElementById("nombre").value;
+        var email = document.getElementById("email").value;
+
+        if (nombre === "" || email === "") {
+            alert("Por favor, complete todos los campos");
+        } else {
+            var contenido = "Nombre: " + nombre + "\nEmail: " + email;
+
+            // Crear un nuevo Blob (objeto binario) con el contenido del formulario
+            var blob = new Blob([contenido], { type: "text/plain;charset=utf-8" });
+
+            // Guardar el Blob como un archivo de texto
+            saveAs(blob, nombre+".txt");
+
+            alert("Formulario válido, la información se ha guardado en guardarinformacion.txt");
+        }
+    }
+</script>
+
+<style>
+    body {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #dd6c6c; /* Cambia el color de fondo a tu preferencia */
+    }
+
+    #content {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #0dd30d; /* Cambia el color de fondo del contenido a tu preferencia */
+        padding: 20px;
+        border-radius: 10px; /* Añade esquinas redondeadas al contenedor */
+    }
+
+    #brandImage {
+        max-width: 100%;
+        height: auto;
+    }
+ </style>
+</body>
+</html>
